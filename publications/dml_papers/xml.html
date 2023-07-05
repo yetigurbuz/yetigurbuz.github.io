@@ -1,0 +1,37 @@
+<tr>
+    <td width="30%">
+    <img src='./publications/dml_papers/xml.png' width="95%">
+    </td>
+    <td valign="top" width="60%">
+    
+    <papertitle>Generalizable Embeddings with Cross-batch Metric Learning</papertitle>
+    <br>
+    (<a target="_blank" href="https://drive.google.com/file/d/1DNyYLTKp7RMe3BNGF5PfmJk8yLoMK_3F/view?usp=drive_link">arXiv</a>)(<a target="_blank" href="https://github.com/yetigurbuz/xml-dml">code</a>)
+    <br>
+    <strong>Y. Z. Gurbuz</strong>, A. A. Alatan,
+    <em>ICIP</em>, 2023 
+    <p></p>
+    <p id="textAreaXML" align="justify" style = "font-size:15px"> In this work, we formulate global average pooling (GAP) as a convex combination of learnable prototypes. We then show that the prototype learning can be expressed as a recursive process fitting a linear predictor to a batch of samples. Buildimg on that perspective, we propose a regularization loss to learn transferable features. Our loss is built on solving a metric learning problem on a batch and then evaluate the learned metric on another batch of unseen classes.
+    </p><a id="toggleButtonXML" onclick="toggleTextXML()" href="javascript:void(0);">See More</a>
+    <p><br></p>
+    </td>
+</tr>
+
+    <script>
+        var statusXML = "less";
+    
+    function toggleTextXML()
+    {
+        var text="Global average pooling (GAP) is a popular component in deep metric learning (DML) for aggregating features. Its effectiveness is often attributed to treating each feature vector as a distinct semantic entity and GAP as a combination of them. Albeit substantiated, such an explanation's algorithmic implications to learn generalizable entities to represent unseen classes, a crucial DML goal, remain unclear. To address this, we formulate GAP as a convex combination of learnable prototypes. We then show that the prototype learning can be expressed as a recursive process fitting a linear predictor to a batch of samples. Building on that perspective, we consider two batches of disjoint classes at each iteration and regularize the learning by expressing the samples of a batch with the prototypes that are fitted to the other batch. We validate our approach on 4 popular DML benchmarks.";
+    
+        if (statusXML == "less") {
+            document.getElementById("textAreaXML").innerHTML=text;
+            document.getElementById("toggleButtonXML").innerHTML = "See Less";
+            statusXML = "more";
+        } else if (statusXML == "more") {
+            document.getElementById("textAreaXML").innerHTML = "In this work, we formulate global average pooling (GAP) as a convex combination of learnable prototypes. We then show that the prototype learning can be expressed as a recursive process fitting a linear predictor to a batch of samples. Buildimg on that perspective, we propose a regularization loss to learn transferable features. Our loss is built on solving a metric learning problem on a batch and then evaluate the learned metric on another batch of unseen classes.";
+            document.getElementById("toggleButtonXML").innerHTML = "See More";
+            statusXML = "less"
+        }
+    }
+    </script>

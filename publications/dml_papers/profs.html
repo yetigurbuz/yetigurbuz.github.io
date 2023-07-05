@@ -1,0 +1,37 @@
+<tr>
+    <td width="30%">
+    <img src='./publications/dml_papers/profs.png' width="95%">
+    </td>
+    <td valign="top" width="70%">
+    
+    <papertitle>Deep Metric Learning with Alternating Projections onto Feasible Sets</papertitle>
+    <br>
+    (<a target="_blank" href="https://arxiv.org/pdf/1907.07585.pdf">arXiv</a>)(<a target="_blank" href="https://github.com/yetigurbuz/ccp-dml">code</a>)
+    <br>
+    O. Can, <strong>Y. Z. Gurbuz</strong>, A. A. Alatan,
+    <em>IEEE International Conference on Image Processing (ICIP), 2021</em>
+    <p></p>
+    <p id="textAreaPROFS" align="justify" style = "font-size:15px">In this work, we revisit the proximity constraints in the representation space implied by the loss terms for proper deep metric learning. We approach the problem by posing it as a set intersection problem and propose to solve it by performing alternating projections onto the relaxed sets defined by the subsets of the proximity constraints. Our formulation results in relatively easier subproblems to be solved by minimizing the regularized version of the typical loss functions for DML with a systematic batch construction, where the batches are constrained to contain a particular sample from each class for a certain number of iterations.
+    </p><a id="toggleButtonPROFS" onclick="toggleTextPROFS()" href="javascript:void(0);">See More</a>
+    <p><br></p>
+    </td>
+</tr>
+
+    <script>
+        var statusPROFS = "less";
+    
+    function toggleTextPROFS()
+    {
+        var text="Minimizers of the typical distance metric learning loss functions can be considered as feasible points satisfying a set of constraints imposed by the training data. We reformulate distance metric learning problem as finding a feasible point of a constraint set where the embedding vectors of the training data satisfy desired intra-class and inter-class proximity. The feasible set induced by the constraint set is expressed as the intersection of the relaxed feasible sets which enforce the proximity constraints only for particular samples (a sample from each class) of the training data. Then, the feasible point problem is to be approximately solved by performing alternating projections onto those feasible sets. Such an approach introduces a regularization term and results in minimizing a typical loss function with a systematic batch set construction where these batches are constrained to contain the same sample from each class for a certain number of iterations. The proposed technique is applied with the well-accepted losses and evaluated on three popular benchmark datasets for image retrieval and clustering. Outperforming state-of-the-art, the proposed approach consistently improves the performance of the integrated loss functions with no additional computational cost.";
+    
+        if (statusPROFS == "less") {
+            document.getElementById("textAreaPROFS").innerHTML=text;
+            document.getElementById("toggleButtonPROFS").innerHTML = "See Less";
+            statusPROFS = "more";
+        } else if (statusPROFS == "more") {
+            document.getElementById("textAreaPROFS").innerHTML = "In this work, we revisit the proximity constraints in the representation space implied by the loss terms for proper deep metric learning. We approach the problem by posing it as a set intersection problem and propose to solve it by performing alternating projections onto the relaxed sets defined by the subsets of the proximity constraints. Our formulation results in relatively easier subproblems to be solved by minimizing the regularized version of the typical loss functions for DML with a systematic batch construction, where the batches are constrained to contain a particular sample from each class for a certain number of iterations.";
+            document.getElementById("toggleButtonPROFS").innerHTML = "See More";
+            statusPROFS = "less"
+        }
+    }
+    </script>

@@ -1,0 +1,38 @@
+<tr>
+    <td width="30%">
+    <img src='./publications/dml_papers/gsp_2.png' width="95%">
+    </td>
+    <td valign="top" width="60%">
+    
+    <papertitle>Generalized Sum Pooling for Metric Learning</papertitle>
+    <br>
+    (<a target="_blank" href="https://openreview.net/pdf?id=TtxOsdYU92d">arXiv</a>)(<a target="_blank" href="https://github.com/yetigurbuz/ccp-dml">code</a>)
+    <br>
+    <strong>Y. Z. Gurbuz</strong>, O. Sener, A. A. Alatan,
+    <em>preprint (arXiv Preprint)</em>, 2022 
+    <p></p>
+    <img src='./publications/dml_papers/gsp_1.png' width="100%">
+    <p id="textAreaGSP" align="justify" style = "font-size:15px">We re-define global average pooling (GAP) as a feature selection problem in which we prioritize a subset of the features that are closest to some trainable prototypes. We show that our formulation enjoys analytical gradients enabling us to use facilitate the prototype learning along with the rest of the embedding function parameters. To generalize the behavior to unseen classes, we further propose a zero-shot prediction loss as a regularization term. We show the effectiveness of our method through rigorous experimentation on 4 popular metric learning benchmarks.
+    </p><a id="toggleButtonGSP" onclick="toggleTextGSP()" href="javascript:void(0);">See More</a>
+    <p><br></p>
+    </td>
+</tr>
+
+    <script>
+        var statusGSP = "less";
+    
+    function toggleTextGSP()
+    {
+        var text="A common architectural choice for deep metric learning is a convolutional neural network followed by global average pooling (GAP). Albeit simple, GAP is a highly effective way to aggregate information. One possible explanation for the effectiveness of GAP is considering each feature vector as representing a different semantic entity and GAP as a convex combination of them. Following this perspective, we generalize GAP and propose a learnable generalized sum pooling method (GSP). GSP improves GAP with two distinct abilities: i) the ability to choose a subset of semantic entities, effectively learning to ignore nuisance information, and ii) learning the weights corresponding to the importance of each entity. Formally, we propose an entropy-smoothed optimal transport problem and show that it is a strict generalization of GAP, \ie a specific realization of the problem gives back GAP. We show that this optimization problem enjoys analytical gradients enabling us to use it as a direct learnable replacement for GAP. We further propose a zero-shot loss to ease the learning of GSP. We show the effectiveness of our method with extensive evaluations on 4 popular metric learning benchmarks.";
+    
+        if (statusGSP == "less") {
+            document.getElementById("textAreaGSP").innerHTML=text;
+            document.getElementById("toggleButtonGSP").innerHTML = "See Less";
+            statusGSP = "more";
+        } else if (statusGSP == "more") {
+            document.getElementById("textAreaGSP").innerHTML = "We re-define global average pooling (GAP) as a feature selection problem in which we prioritize a subset of the features that are closest to some trainable prototypes. We show that our formulation enjoys analytical gradients enabling us to use facilitate the prototype learning along with the rest of the embedding function parameters. To generalize the behavior to unseen classes, we further propose a zero-shot prediction loss as a regularization term. We show the effectiveness of our method through rigorous experimentation on 4 popular metric learning benchmarks.";
+            document.getElementById("toggleButtonGSP").innerHTML = "See More";
+            statusGSP = "less"
+        }
+    }
+    </script>

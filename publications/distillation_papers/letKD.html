@@ -1,0 +1,37 @@
+<tr>
+    <td width="30%">
+    <img src='./publications/distillation_papers/letKD.png' width="95%">
+    </td>
+    <td valign="top" width="70%">
+    
+    <papertitle>Knowledge Distillation Layer that Lets the Student Decide</papertitle>
+    <br>
+    (<a target="_blank" href="https://drive.google.com/file/d/1uR6gtjpgWp3BZHcJHnsg3CZ8BXMWpmdi/view?usp=share_link">arXiv</a>)(<a target="_blank" href="https://drive.google.com/drive/folders/1q1slQPvgJzR8TWjaslFj80RQChPXlukk?usp=sharing">code</a>)
+    <br>
+    <strong>Y. Z. Gurbuz</strong>, A. Gorgun, A. A. Alatan,
+    <em>preprint (arXiv Preprint)</em>, 2023
+    <p></p>
+    <p id="textArealetKD" align="justify" style = "font-size:15px">In this work, we address employing the knowledge of a high capacity model (teacher) to rather explicitly shape the feature transforms of the low capacity model (student) than to regularize them. We propose a learnable feature transform layer that effectively lets the student decide whether to leverage the teacher's knowledge and use it explicitly during the inference in addition to regularizing the learning. We further propose a novel form of supervision based on the teacher's decisions to facilitate learning in the intermediate layers. Through rigorous experimentation, we demonstrate the effectiveness of our approach on 3 popular classification benchmarks and set new state-of-the-art.
+    </p><a id="toggleButtonletKD" onclick="toggleTextletKD()" href="javascript:void(0);">See More</a>
+    <p><br></p>
+    </td>
+</tr>
+
+    <script>
+        var statusletKD = "less";
+    
+    function toggleTextletKD()
+    {
+        var text="Typical technique in knowledge distillation (KD) is regularizing the learning of a limited capacity model (student) by pushing its responses to match a powerful model's (teacher). Albeit useful especially in penultimate layer and beyond, its action on student's feature transform is rather implicit, hindering its practice in the intermediate layers. To explicitly embed the teacher knowledge in feature transform, we propose a learnable KD layer which improves KD with two distinct abilities: i) learning how to leverage the teacher knowledge, enabling to discard nuisance information , and ii) feeding forward the transferred knowledge deeper. Thus, the student enjoys the teacher knowledge during the inference besides training. Formally, we repurpose 1x1-BN-ReLU-1x1 convolutional block to assign a semantic vector to each local region according to the template that the corresponding region matches. To facilitate template learning, we propose a novel form of supervision based on the teacher's decisions. Through rigorous experimentation, we demonstrate the effectiveness of our approach on 3 popular classification benchmarks and set new state-of-the-art.";
+    
+        if (statusletKD == "less") {
+            document.getElementById("textArealetKD").innerHTML=text;
+            document.getElementById("toggleButtonletKD").innerHTML = "See Less";
+            statusletKD = "more";
+        } else if (statusletKD == "more") {
+            document.getElementById("textArealetKD").innerHTML = "In this work, we address employing the knowledge of a high capacity model (teacher) to rather explicitly shape the feature transforms of the low capacity model (student) than to regularize them. We propose a learnable feature transform layer that effectively lets the student decide whether to leverage the teacher's knowledge and use it explicitly during the inference in addition to regularizing the learning. We further propose a novel form of supervision based on the teacher's decisions to facilitate learning in the intermediate layers. Through rigorous experimentation, we demonstrate the effectiveness of our approach on 3 popular classification benchmarks and set new state-of-the-art.";
+            document.getElementById("toggleButtonletKD").innerHTML = "See More";
+            statusletKD = "less"
+        }
+    }
+    </script>

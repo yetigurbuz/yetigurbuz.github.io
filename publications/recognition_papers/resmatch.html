@@ -1,0 +1,39 @@
+<tr>
+    <td width="30%">
+    <img src='./publications/recognition_papers/resmatch.png' width="95%">
+    </td>
+    <td valign="top" width="70%">
+    
+    <papertitle>Feature Embedding by Template Matching as a ResNet Block</papertitle>
+    <br>
+    (<a target="_blank" href="https://arxiv.org/pdf/2210.00992.pdf">arXiv</a>)
+    <br>
+    A. Gorgun, <strong>Y. Z. Gurbuz</strong>, A. A. Alatan,
+    <em>British Machine Vision Conference (BMVC), 2022</em>
+    <p></p>
+    <p id="textAreaResMatch" align="justify" style = "font-size:15px">We revamp 3x3-BN-ReLU-1x1 based feature transform to assign a feature vector to each local region according to the semantic meaning of the template that the corresponding region matches. Specifically, we show that batch normalization (BN) followed by a rectified linear unit (ReLU) can be interpreted as arg-max optimizer. Following this perspective, we tailor a residual block that explicitly forces semantically meaningful local feature embedding through using label information. We evaluate our method on three popular benchmark datasets with several architectures for image classification and consistently show that our approach substantially improves the performance of the baseline architectures.
+    </p><a id="toggleButtonResMatch" onclick="toggleTextResMatch()" href="javascript:void(0);">See More</a>
+    <p><br></p>
+    </td>
+</tr>
+
+    <script>
+        var statusResMatch = "less";
+    
+    function toggleTextResMatch()
+    {
+        var text="In this study, we address the challenge of using class-level supervision to explicitly shape the behavior of the intermediate features, which differs from building classifiers at the output of intermediate layers to alleviate vanishing gradient as in GoogLeNet like architectures. We first consider bottom-up formulation of feature embedding through template matching and rigorously show its resemblance to how typical ResNet convolution blocks operate. Building on such a relation, we propose a residual block that assigns a feature vector to each local region according to the classes that the corresponding region matches. We define 'best-matching' as a solution of an optimization problem and employ a soft-max solution for not only enabling learning but also yielding novel semantic entities as the convex combination of the class features. Specifically, our block is trained with class-level supervision and each local region is encouraged to predict the class of the image it belongs. Surely, some regions are expected to match multiple classes since local features are shared among the classes (e.g. 'wing' can exist in both 'plane 'and 'bird'). Our method exploits such information to assign semantically meaningful embedding vectors to those regions by combining the vectors of the matched classes. Namely, we explicitly shape the bottom-up behavior of CNNs by learning to combine existing classes to make up new classes for the local regions. We validate our theoretical claims and show the effectiveness of our method with extensive evaluations on 3 popular classification benchmarks.";
+    
+        if (statusResMatch == "less") {
+            document.getElementById("textAreaResMatch").innerHTML=text;
+            document.getElementById("toggleButtonResMatch").innerHTML = "See Less";
+            statusResMatch = "more";
+        } else if (statusResMatch == "more") {
+            document.getElementById("textAreaResMatch").innerHTML = "We revamp 3x3-BN-ReLU-1x1 based feature transform to assign a feature vector to each local region according to the semantic meaning of the template that the corresponding region matches. Specifically, we show that batch normalization (BN) followed by a rectified linear unit (ReLU) can be interpreted as arg-max optimizer. Following this perspective, we tailor a residual block that explicitly forces semantically meaningful local feature embedding through using label information. We evaluate our method on three popular benchmark datasets with several architectures for image classification and consistently show that our approach substantially improves the performance of the baseline architectures.";
+            document.getElementById("toggleButtonResMatch").innerHTML = "See More";
+            statusResMatch = "less"
+        }
+    }
+    </script>
+
+

@@ -1,0 +1,37 @@
+<tr>
+    <td width="30%">
+    <img src='./publications/dml_papers/ccp.jpg' width="95%">
+    </td>
+    <td valign="top" width="60%">
+    
+    <papertitle>Deep Metric Learning with Chance Constraints</papertitle>
+    <br>
+    (<a target="_blank" href="https://arxiv.org/pdf/2209.09060.pdf">arXiv</a>)(<a target="_blank" href="https://github.com/yetigurbuz/ccp-dml">code</a>)
+    <br>
+    <strong>Y. Z. Gurbuz</strong>, O. Can, A. A. Alatan,
+    <em>preprint (arXiv Preprint)</em>, 2022 
+    <p></p>
+    <p id="textAreaCCP" align="justify" style = "font-size:15px">Bringing a different perspective to deep metric learning (DML) formulation, we formulate it as a chance constrained optimization problem and theoretically show that a contrastive loss based DML objective is a surrogate for the chance constraints. We rigorously convert the initial problem formulation into another form enabling expressing DML as a set intersection problem. The theory suggests a set intersection mechanism yet allows a greedy algorithm via iterative projections. To this end, we also relate the solution of a proxy-based DML approach to one of the supersets to be intersected to obtain the desired solution. As a result, we formally develop a proxy-based method that inherently employs arbitrary number of proxies for better generalization, realizing the mechanism suggested by the theory with a simple, yet effective, algorithm.
+    </p><a id="toggleButtonCCP" onclick="toggleTextCCP()" href="javascript:void(0);">See More</a>
+    <p><br></p>
+    </td>
+</tr>
+
+    <script>
+        var statusCCP = "less";
+    
+    function toggleTextCCP()
+    {
+        var text="Deep metric learning (DML) aims to minimize empirical expected loss of the pairwise intra-/inter- class proximity violations in the embedding image. We relate DML to feasibility problem of finite chance constraints. We show that minimizer of proxy-based DML satisfies certain chance constraints, and that the worst case generalization performance of the proxy-based methods can be characterized by the radius of the smallest ball around a class proxy to cover the entire domain of the corresponding class samples, suggesting multiple proxies per class helps performance. To provide a scalable algorithm as well as exploiting more proxies, we consider the chance constraints implied by the minimizers of proxy-based DML instances and reformulate DML as finding a feasible point in intersection of such constraints, resulting in a problem to be approximately solved by iterative projections. Simply put, we repeatedly train a regularized proxy-based loss and re-initialize the proxies with the embeddings of the deliberately selected new samples. We apply our method with the well-accepted losses and show the effectiveness with extensive evaluations on 4 popular metric learning benchmarks.";
+    
+        if (statusCCP == "less") {
+            document.getElementById("textAreaCCP").innerHTML=text;
+            document.getElementById("toggleButtonCCP").innerHTML = "See Less";
+            statusCCP = "more";
+        } else if (statusCCP == "more") {
+            document.getElementById("textAreaCCP").innerHTML = "Bringing a different perspective to deep metric learning (DML) formulation, we formulate it as a chance constrained optimization problem and theoretically show that a contrastive loss based DML objective is a surrogate for the chance constraints. We rigorously convert the initial problem formulation into another form enabling expressing DML as a set intersection problem. The theory suggests a set intersection mechanism yet allows a greedy algorithm via iterative projections. To this end, we also relate the solution of a proxy-based DML approach to one of the supersets to be intersected to obtain the desired solution. As a result, we formally develop a proxy-based method that inherently employs arbitrary number of proxies for better generalization, realizing the mechanism suggested by the theory with a simple, yet effective, algorithm.";
+            document.getElementById("toggleButtonCCP").innerHTML = "See More";
+            statusCCP = "less"
+        }
+    }
+    </script>
